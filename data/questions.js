@@ -2,8 +2,8 @@
 export default [
   {
     question: "Which of these is the capital of Nigeria?",
-    options: ["Abuja", "Lagos", "Delta"],
-    answer: 1,
+    options: ["Abuja", "Lagos", "Delta", "Ogun"],
+    answer: 0,
   },
   {
     question: "When did Nigeria gets her independence?",

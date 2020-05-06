@@ -7,10 +7,47 @@
     <title>Quiz App</title>
   </head>
   <body>
+    <nav>
+      <h1>Premier League Quiz</h1>
+    </nav>
+    <!-- start modal -->
+    <div class="modal-container start-modal">
+      <div class="modal">
+        <h1>Welcome</h1>
+        <p>
+          How well do you know the Premier League.
+        </p>
+        <button type="button" class="btn start-quiz">click to find out</button>
+      </div>
+    </div>
+
     <div class="container">
-      <div id="quiz"></div>
-      <button type="button" class="btn" id="next-btn">Next</button>
-      <button type="button" id="sumbit-btn" class="btn">Submit Quiz</button>
+      <div id="quiz">
+        <div><small>score: </small><span class="score"></span></div>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+      </div>
+      <div class="buttons-container">
+        <button type="button" class="btn" id="next-btn">Next Question</button>
+        <button type="button" id="submit-btn" class="btn">Submit Quiz</button>
+      </div>
+    </div>
+
+    <!-- submit modal -->
+    <div class="modal-container result-modal">
+      <div class="modal">
+        <h1>
+          Congratulations!
+        </h1>
+
+        <p>
+          You have completed the Quiz.
+          <br />
+          You got <strong><span id="final-score"></span></strong> from
+          <strong><span id="total"></span></strong> Questions
+        </p>
+        <button type="button" class="btn play-again">PLAY AGAIN</button>
+      </div>
     </div>
 
     <script type="module" src="./script.js"></script>
