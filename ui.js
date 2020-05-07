@@ -39,6 +39,18 @@ class UI {
     this.resultModal.classList.add("show-modal");
   };
 
+  showAnswerStatus = (input, type) => {
+    if (type === "correct") {
+      input.style.backgroundColor = "green";
+      input.style.color = "white";
+    }
+
+    if (type === "fail") {
+      input.style.backgroundColor = "red";
+      input.style.color = "white";
+    }
+  };
+
   showStartModal = () => {
     this.startModal.classList.add("show-modal");
   };

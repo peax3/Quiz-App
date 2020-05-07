@@ -55,9 +55,15 @@ function checkAnswer(e, options) {
   if (e.target.value == questions[currentQuestionIndex].answer) {
     score = score + 1;
     ui.updateScore(score);
-    e.target.parentElement.style.backgroundColor = "green";
+    ui.showAnswerStatus(e.target.parentElement, "correct");
   } else {
-    e.target.parentElement.style.backgroundColor = "red";
+    ui.showAnswerStatus(e.target.parentElement, "fail");
+    // loop throught the options and find the correct answer
+    options.forEach((option) => {
+      if (option.value == questions[currentQuestionIndex].answer) {
+        ui.showAnswerStatus(option.parentElement, "correct");
+      }
+    });
   }
 
   if (currentQuestionIndex >= totalQuestionNum - 1) {
